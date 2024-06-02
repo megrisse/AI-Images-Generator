@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css'
 
 const ImageGenerator = () => {
   const [prompt, setPrompt] = useState('');
@@ -54,6 +55,7 @@ const ImageGenerator = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#13160a] p-4">
       <h1 className="text-2xl font-bold mb-4 text-white">Image Generator</h1>
+      <h1 className='text-sm font-medium text-gray-400 mb-6'>Enter a description of the image you want, and let the AI generate it for you.</h1>
       <input
         type="text"
         value={prompt}
@@ -70,7 +72,7 @@ const ImageGenerator = () => {
       <button
         onClick={handleGenerateImage}
         disabled={loading}
-        className="bg-blue-500 text-white px-4 py-2 rounded disabled:bg-gray-400"
+        className="bg-blue-500 text-white px-4 py-2 rounded disabled:bg-gray-400 shine-button"
       >
         {loading ? 'Generating...' : 'Generate'}
       </button>
